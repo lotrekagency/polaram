@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch'
+import {API_ENDPOINT} from '../constants'
 
 export const REQUEST_PHOTOS = 'REQUEST_PHOTOS'
 export const RECEIVE_PHOTOS = 'RECEIVE_PHOTOS'
@@ -21,7 +22,7 @@ function receivePhotos(json) {
 function fetchPhotos() {
   return dispatch => {
     dispatch(requestPhotos())
-    return fetch('/server/photos.json')
+    return fetch(API_ENDPOINT + '/server/photos.json')
       .then(response => response.json())
       .then(json => dispatch(receivePhotos(json)))
   }
