@@ -1,14 +1,12 @@
 {
-    "photos" : [
-
-        {
-            "id" : "1",
-            "url" : "instagram.com/asd.png"
-        },
-        {
-            "id" : "2",
-            "url" : "instagram.com/qwe.png"
-        }
-    ]
-
+  "photos" : [
+    {
+      "id" : "1",
+      "url" : "instagram.com/asd.png"
+    },
+    {
+      "id" : "2",
+      "url" : "instagram.com/qwe.png"
+    }
+  ]
 }
