@@ -2,11 +2,7 @@ import {
   REQUEST_PHOTOS, RECEIVE_PHOTOS
 } from '../actions'
 
-function photos(state = {
-  isFetching: false,
-  didInvalidate: false,
-  items: []
-}, action) {
+function photos(state = {}, action) {
   switch (action.type) {
     case REQUEST_PHOTOS:
       return Object.assign({}, state, {
@@ -23,7 +19,10 @@ function photos(state = {
   }
 }
 
-export default function photosFetched(state = { }, action) {
+export default function photosFetched(state = {
+  isFetching: false,
+  photos: []
+}, action) {
   switch (action.type) {
     case RECEIVE_PHOTOS:
     case REQUEST_PHOTOS:
