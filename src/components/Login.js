@@ -6,7 +6,7 @@ import InstagramLogin from './InstagramLogin'
 import {loginUserSuccess} from '../actions'
 
 
-export default class Login extends Component {
+export class Login extends Component {
 
   componentWillMount() {
     if (this.props.auth.isAuthenticated) {

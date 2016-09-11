@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {logout} from '../actions'
 
 
-export default class Logout extends Component {
+export class Logout extends Component {
 
   componentWillMount() {
   	const { dispatch } = this.props

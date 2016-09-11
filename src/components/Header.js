@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 
-export default class Header extends Component {
+export class Header extends Component {
   render() {
     var loginButton
     if (this.props.auth.isAuthenticated) {

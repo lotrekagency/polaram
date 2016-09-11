@@ -5,7 +5,7 @@ import {fetchPhotosIfNeeded} from '../actions'
 import Snapshot from './Snapshot'
 
 
-export default class SnapshotList extends Component {
+export class SnapshotList extends Component {
 
   componentDidMount() {
     const { dispatch } = this.props
