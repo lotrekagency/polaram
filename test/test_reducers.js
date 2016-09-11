@@ -6,7 +6,7 @@ describe('photosFetched reducer', () => {
   it('should return the initial state', () => {
     expect(
       photosFetched(undefined, {})
-    ).toEqual({})
+    ).toEqual({ isFetching: false, photos: [] })
   })
 
   it('should handle photos requests', () => {
@@ -30,7 +30,7 @@ describe('photosFetched reducer', () => {
   it('should handle photos fetched', () => {
 
     const mockResponse = {
-      "photos" : [
+      "data" : [
         {
           "id" : "1",
           "url" : "instagram.com/asd.png"
