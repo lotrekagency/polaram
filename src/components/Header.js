@@ -12,11 +12,13 @@ export class Header extends Component {
     }
     return (
       <div>
-        <h1>Instagram downloader</h1>
-        <ul>
-          {loginButton}
-          <li><a href='/about'>About</a></li>
-        </ul>
+        <header className='header'>
+          <h1>Instagram downloader</h1>
+          <ul>
+            {loginButton}
+            <li><a href='/about'>About</a></li>
+          </ul>
+        </header>
       </div>
     );
   }
