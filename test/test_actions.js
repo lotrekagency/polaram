@@ -2,7 +2,7 @@ import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import nock from 'nock'
 
-import expect from 'expect'
+import { expect } from 'chai';
 
 import * as actions from '../src/actions'
 import {API_ENDPOINT} from '../src/constants'
@@ -58,7 +58,7 @@ describe('Async actions', () => {
 
     return store.dispatch(actions.fetchPhotosIfNeeded())
       .then(() => { // return of async actions
-        expect(store.getActions()).toEqual(expectedActions)
+        expect(store.getActions()).to.deep.equal(expectedActions)
       })
   })
 })

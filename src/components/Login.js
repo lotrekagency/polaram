@@ -17,7 +17,6 @@ export class Login extends Component {
 
   render() {
     var loginCallback = (token) => {
-      console.log('CALLBACKKKK')
       const { dispatch } = this.props
       dispatch(loginUserSuccess(token, '/app'))
     }

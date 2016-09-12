@@ -1,4 +1,4 @@
-import expect from 'expect'
+import { expect } from 'chai';
 import photosFetched from '../src/reducers/photosFetched'
 import * as actions from '../src/actions'
 
@@ -6,7 +6,7 @@ describe('photosFetched reducer', () => {
   it('should return the initial state', () => {
     expect(
       photosFetched(undefined, {})
-    ).toEqual({ isFetching: false, photos: [] })
+    ).to.deep.equal({ isFetching: false, photos: [] })
   })
 
   it('should handle photos requests', () => {
@@ -23,7 +23,7 @@ describe('photosFetched reducer', () => {
       photosFetched(initialState, {
         type: actions.REQUEST_PHOTOS,
       })
-    ).toEqual(finalState)
+    ).to.deep.equal(finalState)
 
   })
 
@@ -61,7 +61,7 @@ describe('photosFetched reducer', () => {
           receivedAt: 123
         }
       )
-    ).toEqual(finalState)
+    ).to.deep.equal(finalState)
   })
 
 })
