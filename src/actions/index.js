@@ -4,7 +4,6 @@ import { routerMiddleware, push } from 'react-router-redux'
 
 export const REQUEST_PHOTOS = 'REQUEST_PHOTOS'
 export const RECEIVE_PHOTOS = 'RECEIVE_PHOTOS'
-export const SELECT_PHOTO = 'SELECT_PHOTO'
 export const LOGIN_USER_REQUEST = 'LOGIN_USER_REQUEST'
 export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS'
 export const LOGIN_USER_FAILURE = 'LOGIN_USER_FAILURE'
@@ -47,13 +46,6 @@ export function fetchPhotosIfNeeded() {
     if (shouldFetchPhotos(state)) {
       return dispatch(fetchPhotos(state))
     }
-  }
-}
-
-export function selectPhoto(photo) {
-  return {
-    type: SELECT_PHOTO,
-    photo
   }
 }
 
