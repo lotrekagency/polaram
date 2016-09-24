@@ -14,7 +14,7 @@ export class SnapshotList extends Component {
 
   render() {
     return (
-      <div>
+      <div className='gallery'>
         {
           this.props.photos.map(photo =>
             <Snapshot photo={photo}/>
