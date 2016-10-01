@@ -14,13 +14,13 @@ export class SnapshotList extends Component {
 
   render() {
     return (
-      <div className='gallery'>
-        {
-          this.props.photos.map(photo =>
-            <Snapshot photo={photo}/>
-          )
-        }
-      </div>
+        <div className='grid'>
+          {
+            this.props.photos.map(photo =>
+              <Snapshot photo={photo}/>
+            )
+          }
+        </div>
     );
   }
 }
