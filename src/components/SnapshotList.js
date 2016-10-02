@@ -17,7 +17,7 @@ export class SnapshotList extends Component {
         <div className='grid'>
           {
             this.props.photos.map(photo =>
-              <Snapshot photo={photo}/>
+              <Snapshot key={'photo-' + photo.id} photo={photo}/>
             )
           }
         </div>
