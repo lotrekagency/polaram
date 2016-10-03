@@ -1,3 +1,9 @@
+@mixin grid-element-measures($elements_per_line, $padding, $grow) {
+    flex-grow: $grow;
+    flex-basis: calc((100% / #{$elements_per_line}) - #{$padding} * 2);
+    max-width: calc((100% / #{$elements_per_line}) - #{$padding} * 2);
+}
+
 .grid {
     display: flex; 
     flex-wrap: wrap;
@@ -6,25 +12,18 @@
 
 .grid-item {
     flex-grow: 0;
-    flex-basis: calc((100% / 3) - 10px);
     padding: 5px;
 
     @media screen and (min-width: 320px) {
-        flex-grow: 1;
-        flex-basis: calc((100% / 1) - 10px);
-        max-width: calc((100% / 1) - 10px);
+        @include grid-element-measures(1, 5px, 1);
     }
 
     @media screen and (min-width: 500px) {
-        flex-grow: 1;
-        flex-basis: calc((100% / 2) - 10px);
-        max-width: calc((100% / 2) - 10px);
+        @include grid-element-measures(2, 5px, 1);
     }
 
     @media screen and (min-width: 750px) {
-        flex-grow: 0;
-        flex-basis: calc((100% / 3) - 10px);
-        max-width: calc((100% / 3) - 10px);
+        @include grid-element-measures(3, 5px, 0);
     }
 
 }
