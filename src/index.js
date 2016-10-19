@@ -1,5 +1,3 @@
-
-
 import 'babel-polyfill'
 
 import React from 'react'
@@ -27,7 +25,7 @@ import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-rou
 const logger = createLogger();
 
 let store = compose(
- applyMiddleware(thunkMiddleware, logger, routerMiddleware(browserHistory) ),
+  applyMiddleware(thunkMiddleware, logger, routerMiddleware(browserHistory) ),
 )(createStore)(rootReducer);
 
 const history = syncHistoryWithStore(browserHistory, store)

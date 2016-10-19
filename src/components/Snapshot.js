@@ -4,7 +4,6 @@ export default class Snapshot extends Component {
 
   constructor() {
     super();
-
     this.onPhotoClick = this.onPhotoClick.bind(this);
   }
 

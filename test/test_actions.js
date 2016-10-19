@@ -45,7 +45,7 @@ describe('Async actions', () => {
     ]
 
     nock(API_ENDPOINT)
-      .get('/users/self/media/recent/?access_token=' + mockedToken)
+      .get('/media/recent/?access_token=' + mockedToken)
       .reply(200, mockResponse)
 
     MockDate.set(mockedDate)

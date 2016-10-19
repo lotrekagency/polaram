@@ -26,7 +26,7 @@ function receivePhotos(json) {
 function fetchPhotos(state) {
   return dispatch => {
     dispatch(requestPhotos())
-    return fetch(API_ENDPOINT + 'users/self/media/recent/?access_token=' + state.auth.token)
+    return fetch(API_ENDPOINT + 'media/recent/?access_token=' + state.auth.token)
       .then(response => response.json())
       .then(json => dispatch(receivePhotos(json)))
   }
@@ -84,7 +84,7 @@ export function logout(redirect) {
       dispatch(push(redirect));
     }
   }
-} 
+}
 
 function _loginUserSuccess(token) {
   localStorage.setItem('token', token);
