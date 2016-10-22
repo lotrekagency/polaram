@@ -8,7 +8,13 @@ export default class Snapshot extends Component {
   }
 
   onPhotoClick () {
-    console.log(this.props.photo.images.standard_resolution.url)
+    let imgUrl = this.props.photo.images.standard_resolution.url;
+    console.log(imgUrl)
+    let link = document.createElement('a');
+    link.href = imgUrl;
+    link.download = 'New instagram image.jpg';
+    document.body.appendChild(link);
+    link.click();
   }
 
   render() {
